@@ -1,5 +1,5 @@
 package com.pluralsight.organized;
-
+import  java.util.*;
 // this is a class
 public class Droid {
 
@@ -7,13 +7,12 @@ public class Droid {
     protected String modelType;
     protected String purpose;
 
-
     // this is an example of a constructor
     public Droid(String serialNumber, String modelType, String purpose) {
         this.serialNumber = serialNumber;
         this.modelType = modelType;
         this.purpose = purpose;
-        //this.speak();
+       //this.speak();
 
     }
     public Droid(String serialNumber){}
@@ -53,10 +52,11 @@ public class Droid {
         System.out.println("Hello this is" + this.modelType + " with the serial number: " + this.serialNumber + ". Can I come to the repair shop?");
     }
 
-
-//    public String toString() {//overriding the toString() method
-//        return modelType + " " + serialNumber + " " + purpose;
+//    @Override
+//    public String toString() {
+//        return "Droid{" +
+//                "serialNumber=" + serialNumber + " " +
+//                ", model=" + modelType + " " + ", purpose= " + purpose;
 //    }
-
-
+//
 }

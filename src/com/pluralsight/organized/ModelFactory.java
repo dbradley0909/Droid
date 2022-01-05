@@ -3,13 +3,13 @@ import java.util.*;
 
 public class ModelFactory {
 
-    private static Map<Integer, String> map;
+    private static Map<String, String> map;
     static
     {
         map = new HashMap<>();
-        map.put(1, "Ishtromech");
-        map.put(2, "Seeker");
-        map.put(3, "Battle");
+        map.put("one", "Ishtromech");
+        map.put("two", "Seeker");
+        map.put("three", "Battle");
     }
 
     private String modelType;
