@@ -1,18 +1,21 @@
 package com.pluralsight.organized;
 import  java.util.*;
+
+
+
 // this is a class
 public class Droid {
 
-    protected String serialNumber;
+    private final String serialNumber;
     protected String modelType;
     protected String purpose;
 
     // this is an example of a constructor
-    public Droid(String serialNumber, String modelType, String purpose) {
+    public Droid(String serialNumber, String modelType, String purpose, List<Tooltype> tools) {
         this.serialNumber = serialNumber;
         this.modelType = modelType;
         this.purpose = purpose;
-       //this.speak();
+        this.speak();
 
     }
     public Droid(String serialNumber){}
@@ -39,10 +42,10 @@ public class Droid {
     public String getSerialNumber() {
         return this.serialNumber;
     }
-
-    public void setModelType(String modelType) {
-        this.modelType = modelType;
-    }
+// had to get rid of due to ^^ final attribute
+    //public void setModelType(String modelType) {
+     //   this.modelType = modelType;
+    //}
 
     public String getModelType() {
         return this.modelType;
@@ -51,12 +54,13 @@ public class Droid {
     public void speak() {
         System.out.println("Hello this is" + this.modelType + " with the serial number: " + this.serialNumber + ". Can I come to the repair shop?");
     }
-
-//    @Override
+    //    @Override
 //    public String toString() {
 //        return "Droid{" +
 //                "serialNumber=" + serialNumber + " " +
 //                ", model=" + modelType + " " + ", purpose= " + purpose;
 //    }
 //
+
+
 }
